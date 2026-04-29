@@ -1,13 +1,407 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>adrianosbotsios</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adrianos Botsios</title>
+  <meta name="description"
+    content="Adrianos Botsios - studying Computer Science and Economics at Brown. Personal site, projects, and CV.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Adrianos Botsios">
+  <meta property="og:description"
+    content="Studying Computer Science and Economics at Brown. Research, work, and leadership.">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top">Adrianos Botsios</a>
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#education">Education</a></li>
+          <li><a class="nav__link" href="#skills">Skills</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section id="top" class="hero">
+      <div class="container">
+        <h1 class="hero__name">Adrianos Botsios</h1>
+        <p class="hero__positioning">Studying Computer Science and Economics at Brown.</p>
+        <div class="social" aria-label="Social links">
+          <!-- TODO: confirm GitHub / LinkedIn handles -->
+          <a href="https://github.com/AdrianosEB" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/adrianos-botsios-445233243/?skipRedirect=true" target="_blank"
+            rel="noopener">LinkedIn</a>
+          <a href="mailto:adrianosbotsios@gmail.com">Email</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section__title">About</h2>
+        <div class="about__inner">
+          <figure class="about__portrait">
+            <img src="assets/Adrianos.jpeg" alt="Portrait of Adrianos Botsios" width="340" height="340">
+          </figure>
+          <div class="about__text">
+            <p>I'm Adrianos, studying Computer Science and Economics at Brown. I grew up in Athens, and most of what I
+              make sits at the intersection of robotics, AI, and the things people actually use day to day.</p>
+            <p>I like building tangible systems - from a fully 3D-printed humanoid robot I spent five years on, to AI
+              agents that automate real workflows for small businesses, to research on how we label data for
+              vision-language-action models. If a project mixes hardware, software, and a hard problem, I'm probably
+              interested.</p>
+            <p>Outside of code I run student ventures, work with the Brown Entrepreneurship Club, and care a lot about
+              how AI is taught and governed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <div class="container container--wide">
+        <h2 class="section__title">Projects</h2>
+
+        <article class="project-featured" id="niki">
+          <figure class="project-featured__media">
+            <img src="assets/projects/niki.jpg" alt="Niki the humanoid robot" loading="lazy" width="1170" height="672">
+          </figure>
+          <div class="project-featured__body">
+            <span class="project-featured__badge">Featured · 2020–2025</span>
+            <h3 class="project-featured__title">Niki the Humanoid Robot</h3>
+            <p class="project-featured__meta">Creator, Lead Researcher · Athens, Greece</p>
+            <p class="project-featured__desc">Niki is a fully 3D-printed humanoid robot I built over five years. She
+              combines computer vision, speech recognition, natural language processing, and IoT to perform a range of
+              tasks - recognizing faces with a custom-trained neural net, holding conversations through a ChatGPT-backed
+              personality layer with RAG, and controlling motors through Arduino and ESP32 firmware. National TV
+              nicknamed her <em>the first AI humanoid robot in Greece</em>, and I presented the project at MIT
+              Technology Review's 2025 EmTech Conference.</p>
+            <ul class="tags" aria-label="Tech stack">
+              <li>Python</li>
+              <li>C++</li>
+              <li>PyTorch</li>
+              <li>Hugging Face</li>
+              <li>OpenCV</li>
+              <li>LangChain</li>
+              <li>Arduino</li>
+              <li>ESP32</li>
+            </ul>
+            <p class="project-featured__links">
+              <!-- TODO: insert Niki repo URL -->
+              <a href="#" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://www.technologyreview.com/" target="_blank" rel="noopener">EmTech 2025</a>
+            </p>
+          </div>
+        </article>
+
+        <div class="projects__other">
+
+          <div class="projects-group">
+            <h3 class="projects-group__heading">Research</h3>
+            <ul class="project-mini-list">
+              <li class="project-mini" id="vla-research">
+                <header class="project-mini__head">
+                  <h4 class="project-mini__title">VLA Model Data Labeling Research</h4>
+                  <span class="project-mini__meta">Lead Researcher · Brown University · 2025–Present</span>
+                </header>
+                <p class="project-mini__desc">Lead a 7-person interdisciplinary team at Brown studying scalable data
+                  labeling for vision-language-action models. Focused on multimodal data for emotion-aware humanoid
+                  robots. Funded by the Brown Data Science Institute.</p>
+                <div class="project-mini__foot">
+                  <ul class="tags" aria-label="Tech stack">
+                    <li>PyTorch</li>
+                    <li>Hugging Face</li>
+                    <li>Pandas</li>
+                    <li>Multimodal Data</li>
+                  </ul>
+                  <p class="project-mini__links"><span class="muted">Private / WIP</span></p>
+                </div>
+              </li>
+              <li class="project-mini" id="harvardx">
+                <header class="project-mini__head">
+                  <h4 class="project-mini__title">AI Algorithmic Design (HarvardX)</h4>
+                  <span class="project-mini__meta">Student Researcher · 2023–2024</span>
+                </header>
+                <p class="project-mini__desc">Two applied ML projects: a breast-cancer detector using PCA + ensemble
+                  methods, and a movie recommendation system via statistical modeling and matrix factorization.</p>
+                <div class="project-mini__foot">
+                  <ul class="tags" aria-label="Tech stack">
+                    <li>R</li>
+                    <li>Python</li>
+                    <li>PCA</li>
+                    <li>Matrix Factorization</li>
+                  </ul>
+                  <!-- TODO: insert HarvardX repo URL -->
+                  <p class="project-mini__links"><a href="#" target="_blank" rel="noopener">GitHub</a></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="projects-group">
+            <h3 class="projects-group__heading">Work</h3>
+            <ul class="project-mini-list">
+              <li class="project-mini" id="council-of-europe">
+                <header class="project-mini__head">
+                  <h4 class="project-mini__title">Council of Europe - Committee on AI</h4>
+                  <span class="project-mini__meta">Advisor, Intern · Strasbourg, France · 2023</span>
+                </header>
+                <p class="project-mini__desc">Advised the Council of Europe's Committees on AI and Human Rights on
+                  policy - ethical principles without throttling innovation. Contributed to the Convention on AI, Human
+                  Rights, Democracy, and the Rule of Law.</p>
+                <div class="project-mini__foot">
+                  <ul class="tags" aria-label="Focus">
+                    <li>AI Policy</li>
+                    <li>Ethics</li>
+                    <li>Regulation</li>
+                  </ul>
+                  <p class="project-mini__links"><span class="muted">Policy work</span></p>
+                </div>
+              </li>
+              <li class="project-mini" id="intracom">
+                <header class="project-mini__head">
+                  <h4 class="project-mini__title">Intracom Telecom - Smart Home &amp; Factory Robotics</h4>
+                  <span class="project-mini__meta">ML &amp; Robotics Intern · Athens, Greece · 2023</span>
+                </header>
+                <p class="project-mini__desc">Built a full-stack IoT smart-home lighting platform (React, PostgreSQL).
+                  Retrained an object-detection model for factory-floor robotics; integrated into a metal-sheet shaping
+                  production line.</p>
+                <div class="project-mini__foot">
+                  <ul class="tags" aria-label="Tech stack">
+                    <li>React</li>
+                    <li>JavaScript</li>
+                    <li>PostgreSQL</li>
+                    <li>Python</li>
+                    <li>Computer Vision</li>
+                  </ul>
+                  <p class="project-mini__links"><span class="muted">Proprietary</span></p>
+                </div>
+              </li>
+              <li class="project-mini" id="cosmote">
+                <header class="project-mini__head">
+                  <h4 class="project-mini__title">Cosmote - Greek NLP for Customer Feedback</h4>
+                  <span class="project-mini__meta">NLP &amp; PM Intern · Athens, Greece · 2022</span>
+                </header>
+                <p class="project-mini__desc">NLP model analyzing Greek-language customer feedback for satisfaction
+                  signals at Greece's largest telecom. Secured €4,000 in sponsorship for the team along the way.</p>
+                <div class="project-mini__foot">
+                  <ul class="tags" aria-label="Tech stack">
+                    <li>Python</li>
+                    <li>NLP</li>
+                    <li>Sentiment</li>
+                    <li>PM</li>
+                  </ul>
+                  <p class="project-mini__links"><span class="muted">Proprietary</span></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="projects-group">
+            <h3 class="projects-group__heading">Leadership</h3>
+            <ul class="project-mini-list">
+              <li class="project-mini" id="ai-agents">
+                <header class="project-mini__head">
+                  <h4 class="project-mini__title">AI Agent Consulting</h4>
+                  <span class="project-mini__meta">Co-founder · Providence, USA · 2026–Present</span>
+                </header>
+                <p class="project-mini__desc">Startup co-founded at Brown building AI agents for SMBs - email triage,
+                  order/invoice processing, data entry, booking workflows - via LangChain + n8n on AWS. Building a
+                  full-stack MVP that auto-suggests agentic workflows from user work patterns.</p>
+                <div class="project-mini__foot">
+                  <ul class="tags" aria-label="Tech stack">
+                    <li>Python</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>LangChain</li>
+                    <li>n8n</li>
+                    <li>AWS</li>
+                  </ul>
+                  <p class="project-mini__links"><span class="muted">GitHub coming soon</span></p>
+                </div>
+              </li>
+              <li class="project-mini" id="grading-platform">
+                <header class="project-mini__head">
+                  <h4 class="project-mini__title">AI-Powered Grading &amp; Feedback Platform</h4>
+                  <span class="project-mini__meta">Innovation Dojo · Brown Entrepreneurship · 2025–Present</span>
+                </header>
+                <p class="project-mini__desc">Startup concept pitched through Brown's Innovation Dojo accelerator: an AI
+                  tool that grades student work and gives rubric-aware feedback at scale. Selected as 1 of 20 students;
+                  placed 1st at the final competition.</p>
+                <div class="project-mini__foot">
+                  <ul class="tags" aria-label="Tech stack">
+                    <li>Python</li>
+                    <li>LLMs</li>
+                    <li>Full-stack Web</li>
+                  </ul>
+                  <p class="project-mini__links"><span class="muted">GitHub coming soon</span></p>
+                </div>
+              </li>
+              <li class="project-mini" id="ai-ethics">
+                <header class="project-mini__head">
+                  <h4 class="project-mini__title">AI &amp; Ethics in Education</h4>
+                  <span class="project-mini__meta">Founder, President · Athens, Greece · 2020–2025</span>
+                </header>
+                <p class="project-mini__desc">Five-year program bringing AI literacy and ethics into Greek public
+                  schools - curriculum handbook + hands-on AI Labs, reaching ~12,000 students. Partnered with the World
+                  Human Forum and NCSR Demokritos; presented at the Council of Europe's 2023 Spring Plenary Session.</p>
+                <div class="project-mini__foot">
+                  <ul class="tags" aria-label="Focus">
+                    <li>Curriculum</li>
+                    <li>AI Labs</li>
+                    <li>Partnerships</li>
+                  </ul>
+                  <p class="project-mini__links"><span class="muted">Non-code project</span></p>
+                </div>
+              </li>
+              <li class="project-mini" id="smartsort">
+                <header class="project-mini__head">
+                  <h4 class="project-mini__title">SmartSort - AI Recycling Bin (Dynamic Innovations)</h4>
+                  <span class="project-mini__meta">Founder, President · Athens, Greece · 2015–2025</span>
+                </header>
+                <p class="project-mini__desc">Led a 23-person team to build SmartSort: an AI recycling bin (custom CNN +
+                  CAD hardware). Raised €8,000, won the ACSTAC AI &amp; IoT award. Face-tracking and conversational
+                  subsystems were later folded into Niki.</p>
+                <div class="project-mini__foot">
+                  <ul class="tags" aria-label="Tech stack">
+                    <li>Python</li>
+                    <li>Custom CNN</li>
+                    <li>OpenCV</li>
+                    <li>CAD</li>
+                    <li>Embedded</li>
+                  </ul>
+                  <!-- TODO: insert Dynamic Innovations repo URL -->
+                  <p class="project-mini__links"><a href="#" target="_blank" rel="noopener">GitHub</a></p>
+                </div>
+              </li>
+              <li class="project-mini" id="smart-city">
+                <header class="project-mini__head">
+                  <h4 class="project-mini__title">Sustainable &amp; Smart City Models (Green Team)</h4>
+                  <span class="project-mini__meta">Founder, President · Athens, Greece · 2015–2025</span>
+                </header>
+                <p class="project-mini__desc">21-person team that engineered two 4×4 ft physical models of a sustainable
+                  smart city - AI traffic/energy, IoT sensors, renewables. Raised €10,000, won the ACSTAC AI &amp;
+                  Sustainability award, partnered with local municipalities.</p>
+                <div class="project-mini__foot">
+                  <ul class="tags" aria-label="Tech stack">
+                    <li>Python</li>
+                    <li>IoT</li>
+                    <li>Embedded Sensors</li>
+                    <li>Renewable Energy</li>
+                  </ul>
+                  <!-- TODO: insert Green Team repo URL -->
+                  <p class="project-mini__links"><a href="#" target="_blank" rel="noopener">GitHub</a></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="education">
+      <div class="container">
+        <h2 class="section__title">Education</h2>
+        <div class="education__card">
+          <h3 class="education__school">Brown University</h3>
+          <p class="education__line">Sc.B. in Computer Science &amp; Economics · 4.0 / 4.0 GPA</p>
+          <p class="education__line muted">Providence, RI · Expected May 2029</p>
+          <dl class="education__details">
+            <dt>Coursework</dt>
+            <dd>Accelerated Intro to CS, Linear Algebra, Engineering, Management of Organizations</dd>
+            <dt>Activities</dt>
+            <dd>Brown Entrepreneurship Club, Brown Robotics Club, Innovation Dojo, Hellenic Student Association</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section__title">Skills</h2>
+        <div class="skills__group">
+          <h3 class="skills__category">Languages</h3>
+          <ul class="tags">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>C</li>
+            <li>C++</li>
+            <li>R</li>
+            <li>Java</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3 class="skills__category">Frameworks &amp; Tools</h3>
+          <ul class="tags">
+            <li>Node.js</li>
+            <li>React</li>
+            <li>Express</li>
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+            <li>Bootstrap</li>
+            <li>AWS</li>
+            <li>n8n</li>
+          </ul>
+        </div>
+        <div class="skills__group">
+          <h3 class="skills__category">Machine Learning</h3>
+          <ul class="tags">
+            <li>PyTorch</li>
+            <li>Hugging Face</li>
+            <li>OpenCV</li>
+            <li>Pandas</li>
+            <li>LangChain</li>
+            <li>Model Training</li>
+            <li>Fine-tuning</li>
+            <li>Mathematical Modeling</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section__title">Contact</h2>
+        <p>The fastest way to reach me is email. I'm also on the usual places.</p>
+        <ul class="contact__list">
+          <li><a href="mailto:adrianosbotsios@gmail.com">adrianosbotsios@gmail.com</a></li>
+          <li><a href="https://github.com/AdrianosEB" target="_blank" rel="noopener">github.com/AdrianosEB</a></li>
+          <li><a href="https://www.linkedin.com/in/adrianos-botsios-445233243/?skipRedirect=true" target="_blank"
+              rel="noopener">linkedin</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container container--wide footer__inner">
+      <div>Built with HTML, CSS, JS</div>
+      <div><a href="#top">Back to top ↑</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
