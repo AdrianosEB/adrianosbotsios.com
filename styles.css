@@ -40,7 +40,7 @@ body {
   background-color: #DDE9FB;
   background-image:
     linear-gradient(rgba(221, 233, 251, 0.82), rgba(208, 224, 246, 0.82)),
-    url('assets/hero-bg.svg');
+    url('assets/sf.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -184,7 +184,7 @@ section {
   align-items: center;
   background-image:
     linear-gradient(var(--hero-overlay), var(--hero-overlay)),
-    url('assets/hero-bg.svg');
+    url('assets/sf.jpg');
   background-size: cover;
   background-position: center;
   color: #FFFFFF;
