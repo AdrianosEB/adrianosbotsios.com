@@ -86,19 +86,6 @@ p { margin: 0 0 16px; }
 /* =========================================================
    Skip link
    ========================================================= */
-.skip-link {
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  padding: 8px 12px;
-  background: var(--text);
-  color: var(--bg);
-  border-radius: var(--radius-md);
-  transform: translateY(-150%);
-  transition: transform 0.15s;
-  z-index: 100;
-}
-.skip-link:focus { transform: translateY(0); text-decoration: none; }
 
 /* =========================================================
    Nav
@@ -715,7 +702,7 @@ section {
   .nav__inner { padding: 0 16px; }
   .container { padding: 0 16px; }
 
-  .nav__toggle { display: flex; }
+  .nav__toggle { display: flex; margin-left: auto; }
 
   .nav__links {
     position: absolute;
