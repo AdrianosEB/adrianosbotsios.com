@@ -28,8 +28,13 @@
   <header class="nav">
     <div class="nav__inner">
       <a class="nav__brand" href="#top">Adrianos Botsios</a>
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
       <nav aria-label="Primary">
-        <ul class="nav__links">
+        <ul class="nav__links" id="nav-menu">
           <li><a class="nav__link" href="#about">About</a></li>
           <li><a class="nav__link" href="#projects">Projects</a></li>
           <li><a class="nav__link" href="#education">Education</a></li>
@@ -338,6 +343,16 @@
             <dd>Accelerated Intro to CS, Linear Algebra, Engineering, Management of Organizations</dd>
             <dt>Activities</dt>
             <dd>Brown Entrepreneurship Club, Brown Robotics Club, Innovation Dojo, Hellenic Student Association</dd>
+          </dl>
+        </div>
+        <div class="education__card">
+          <h3 class="education__school">HarvardX</h3>
+          <p class="education__line">Professional Certificate in Data Science</p>
+          <p class="education__line muted">Online (edX) · Completed August 2023</p>
+          <dl class="education__details">
+            <dt>Coursework</dt>
+            <dd>R programming, data visualization, probability, statistical inference and modeling, linear regression,
+              machine learning, and a data-science capstone (movie recommendation + breast-cancer prediction)</dd>
           </dl>
         </div>
       </div>

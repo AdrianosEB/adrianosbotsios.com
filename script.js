@@ -11,6 +11,31 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 })();
 
+// Mobile nav: toggle the collapsed menu open/closed.
+(function () {
+  const nav = document.querySelector('.nav');
+  const toggle = document.querySelector('.nav__toggle');
+  if (!nav || !toggle) return;
+
+  const setOpen = (open) => {
+    nav.classList.toggle('nav--open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
+
+  toggle.addEventListener('click', () => {
+    setOpen(!nav.classList.contains('nav--open'));
+  });
+
+  // Close when a link is tapped or on Escape.
+  nav.querySelectorAll('.nav__link').forEach((link) => {
+    link.addEventListener('click', () => setOpen(false));
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false);
+  });
+})();
+
 // Scroll-spy: highlight the nav link for the section currently in view.
 // "Active zone" is the slice just below the sticky nav, ending mid-viewport.
 // When a section enters that zone, its link becomes active and the URL hash syncs.
