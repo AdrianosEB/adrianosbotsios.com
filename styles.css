@@ -150,7 +150,7 @@ p { margin: 0 0 16px; }
   border-bottom-color: var(--accent);
 }
 
-/* Hamburger toggle — hidden on desktop, shown on small screens */
+/* Hamburger toggle: hidden on desktop, shown on small screens */
 .nav__toggle {
   display: none;
   flex-direction: column;
